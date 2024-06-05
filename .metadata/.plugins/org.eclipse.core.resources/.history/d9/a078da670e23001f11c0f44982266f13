@@ -1,0 +1,21 @@
+package com.yein.practice0605;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebServlet("/reservation")
+public class Practice extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String movie = request.getParameter("movie");
+		System.out.println("예매한 영화 : " + movie);
+		
+		int seat = Integer.parseInt(request.getParameter("seat"));
+		System.out.println("예매한 좌석 수 : " + seat);
+	}
+
+}
