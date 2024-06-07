@@ -14,6 +14,7 @@ public class ExceptionHandlerServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		// 서블릿에서 현재 요청 객체(HttpServletRequest)에 설정된 모든 속성(attribute) 이름을 열거하는 코드
 		Enumeration<String> attrNames = request.getAttributeNames();
 		
 		while(attrNames.hasMoreElements()) {
